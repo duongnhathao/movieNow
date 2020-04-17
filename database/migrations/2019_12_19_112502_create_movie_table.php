@@ -2,6 +2,7 @@
 
 use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
+use Illuminate\Support\Carbon;
 use Illuminate\Support\Facades\Schema;
 
 class CreateMovieTable extends Migration
@@ -24,6 +25,9 @@ class CreateMovieTable extends Migration
             $table->text('mov_img');
             $table->longText('mov_description');
             $table->bigInteger('nums_start')->default(0);
+            $table->date('created_at')->default(Carbon::now());
+            $table->date('deleted_at')->nullable(true);
+
 
         });
     }

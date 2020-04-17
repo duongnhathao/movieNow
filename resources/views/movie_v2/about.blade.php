@@ -17,56 +17,56 @@
 
 						<div class="row">
 							<div class="col-md-4">
-								<figure><img src="dummy/figure.jpg" alt="figure image"></figure>
+                                <video autoplay loop width="300" >
+                                    <source src="{{asset('/movies/Laravel - The PHP Framework For Web Artisans.mp4')}}" type="video/mp4">
+                                    Your browser does not support HTML5 video.
+                                </video>
 							</div>
 							<div class="col-md-8">
-								<p class="leading">Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium totam.</p>
-								<p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit consectetur adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam.</p>
-							</div>
+								<p class="leading">This product has developed and accomplished for the purpose of Software engineering subject</p>
+								<p>&#8226; We using laravel framework for this product</p>
+								<p>&#8226; Modify the themplate movie designed by <a href="https://www.themezy.com/free-website-templates/10-movie-reviews-responsive-template">Themezy</a></p>
+								<p>&#8226; Modify the themplate movie designed by <a href="https://startbootstrap.com/themes/sb-admin-2/">Boostrap</a></p>
+
+                            </div>
 						</div>
 
-						<div class="row">
-							<div class="col-md-9">
-								<h2 class="section-title">Vision &amp; Misssion</h2>
-								<p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. </p>
-
-								<p>Neque porro quisquam est, qui dolorem ipsum quia dolor sit consectetur adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam dignissimos ducimus qui blanditiis praesentium voluptatum atque.</p>
-							</div>
-							<div class="col-md-3">
-								<h2 class="section-title">Useful Links</h2>
-								<ul class="arrow">
-									<li><a href="#">Eiusmod tempor incididunt</a></li>
-									<li><a href="#">Tenim ad minim venia</a></li>
-									<li><a href="#">Quis nostrud exercitation</a></li>
-									<li><a href="#">Ullamco laboris reprehenderit</a></li>
-									<li><a href="#">Duis aute dolor voluptat</a></li>
-									<li><a href="#">Velit esse cillum dolore</a></li>
-									<li><a href="#">Excepteur sint occaeca</a></li>
-								</ul>
-							</div>
-						</div> <!-- .row -->
 
 						<h2 class="section-title">Our Team</h2>
 						<div class="row">
-
-							<div class="col-md-12">
+                            <div class="col-md-3"></div>
+							<div class="col-md-3">
 								<div class="team">
-									<figure class="team-image"><img src="{{asset('images/download.jpg')}}" alt=""></figure>
-									<h2 class="team-name">Duong Nhat Hao</h2>
-									<small class="team-title">Dev</small>
+									<figure class="team-image"><img src="https://pbs.twimg.com/profile_images/1145467025445314561/KtZKls3L_400x400.jpg" alt=""></figure>
+									<h1 class="team-name">Duong Nhat Hao</h1>
+									<small class="team-title">51703077 - Developer</small>
 									<div class="social-links">
 										<a href="https://www.facebook.com/haonhatt1712" class="facebook"><i class="fa fa-facebook"></i></a>
 										<a href="https://twitter.com/DuongNhatHao4" class="twitter"><i class="fa fa-twitter"></i></a>
 										<a href="mailto:duongnhathao001@gmail.com" class="google-plus"><i class="fa fa-google"></i></a>
+									</div>
+								</div>
+							</div>
+                            <div class="col-md-3">
+								<div class="team">
+									<figure class="team-image"><img src="https://scontent.fsgn3-1.fna.fbcdn.net/v/t1.0-9/86999423_901010923689073_573030288909664256_n.jpg?_nc_cat=111&_nc_sid=85a577&_nc_ohc=w3aNyETRlQUAX_XNyji&_nc_ht=scontent.fsgn3-1.fna&oh=c6c87751835032213d0554513a244408&oe=5EC0E565" alt=""></figure>
+									<h1 class="team-name">Ngo Quang Truong</h1>
+									<small class="team-title">51703213 - Developer</small>
+									<div class="social-links">
+										<a href="https://www.facebook.com/profile.php?id=100013405204846" class="facebook"><i class="fa fa-facebook"></i></a>
+										<a href="" class="twitter"><i class="fa fa-twitter"></i></a>
+										<a href="mailto:hideonbush0512@gmail.com" class="google-plus"><i class="fa fa-google"></i></a>
 {{--										<a href="" class="pinterest"><i class="fa fa-pinterest"></i></a>--}}
 									</div>
 								</div>
 							</div>
+                            <div class="col-md-3"></div>
 
 
 
 
-						</div>
+
+                        </div>
 					</div>
 				</div> <!-- .container -->
 			</main>

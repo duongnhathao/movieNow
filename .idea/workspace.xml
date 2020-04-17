@@ -1,7 +1,27 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="5f7f1285-a085-4b9b-a16d-51f24d262aee" name="Default Changelist" comment="" />
+    <list default="true" id="5f7f1285-a085-4b9b-a16d-51f24d262aee" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/movienow.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/movienow.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/MovieController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/MovieController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/admin/AdminController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/admin/AdminController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bootstrap/app.php" beforeDir="false" afterPath="$PROJECT_DIR$/bootstrap/app.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/app.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/app.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2019_12_19_112502_create_movie_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2019_12_19_112502_create_movie_table.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2019_12_19_121214_create_movie_rating_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2019_12_19_121214_create_movie_rating_table.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/css_v2/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/css_v2/style.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/js/demo/chart-area-demo.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/js/demo/chart-area-demo.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/js/demo/chart-pie-demo.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/js/demo/chart-pie-demo.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/admin/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/index.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/layouts_v2/footer.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layouts_v2/footer.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/layouts_v2/navbar.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layouts_v2/navbar.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/movie_v2/about.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/movie_v2/about.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -12,6 +32,9 @@
     <execution>
       <executable />
     </execution>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="PhpWorkspaceProjectConfiguration">
     <include_path>
@@ -102,6 +125,11 @@
       <path value="$PROJECT_DIR$/vendor/facade/ignition-contracts" />
       <path value="$PROJECT_DIR$/vendor/scrivo/highlight.php" />
       <path value="$PROJECT_DIR$/vendor/laravel/ui" />
+      <path value="$PROJECT_DIR$/vendor/phenx/php-font-lib" />
+      <path value="$PROJECT_DIR$/vendor/phenx/php-svg-lib" />
+      <path value="$PROJECT_DIR$/vendor/barryvdh/laravel-dompdf" />
+      <path value="$PROJECT_DIR$/vendor/sabberworm/php-css-parser" />
+      <path value="$PROJECT_DIR$/vendor/dompdf/dompdf" />
     </include_path>
   </component>
   <component name="ProjectId" id="1VugyNQnzaKedyiW2AuTrLNJ8la" />
@@ -169,6 +197,8 @@
       <workItem from="1581908320673" duration="237000" />
       <workItem from="1582720896782" duration="24000" />
       <workItem from="1583134829057" duration="1158000" />
+      <workItem from="1587069558353" duration="93000" />
+      <workItem from="1587069698722" duration="29206000" />
     </task>
     <servers />
   </component>
@@ -176,49 +206,29 @@
     <option name="version" value="1" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="690" y="296" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1578299430977">
+    <state x="690" y="296" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1587105912085">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state x="690" y="296" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1920.1080@0.0.1920.1080" timestamp="1578299430977" />
+    <state x="690" y="296" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1920.1080@0.0.1920.1080" timestamp="1587105912085" />
     <state x="964" y="356" key="FileChooserDialogImpl" timestamp="1578452836060">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
     <state x="964" y="356" key="FileChooserDialogImpl/0.0.1920.1080@0.0.1920.1080" timestamp="1578452836060" />
-    <state width="1877" height="295" key="GridCell.Tab.0.bottom" timestamp="1578110052944">
+    <state x="794" y="464" key="NewPhpFileDialog" timestamp="1587106693812">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state width="1877" height="295" key="GridCell.Tab.0.bottom/0.0.1920.1080@0.0.1920.1080" timestamp="1578110052944" />
-    <state width="1877" height="295" key="GridCell.Tab.0.center" timestamp="1578110052943">
+    <state x="794" y="464" key="NewPhpFileDialog/0.0.1920.1080@0.0.1920.1080" timestamp="1587106693812" />
+    <state x="331" y="365" key="com.intellij.ide.util.TipDialog" timestamp="1587069698426">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state width="1877" height="295" key="GridCell.Tab.0.center/0.0.1920.1080@0.0.1920.1080" timestamp="1578110052943" />
-    <state width="1877" height="295" key="GridCell.Tab.0.left" timestamp="1578110052943">
-      <screen x="0" y="0" width="1920" height="1080" />
-    </state>
-    <state width="1877" height="295" key="GridCell.Tab.0.left/0.0.1920.1080@0.0.1920.1080" timestamp="1578110052943" />
-    <state width="1877" height="295" key="GridCell.Tab.0.right" timestamp="1578110052944">
-      <screen x="0" y="0" width="1920" height="1080" />
-    </state>
-    <state width="1877" height="295" key="GridCell.Tab.0.right/0.0.1920.1080@0.0.1920.1080" timestamp="1578110052944" />
-    <state x="733" y="355" key="NewPhpClassDialog" timestamp="1578111917463">
-      <screen x="0" y="0" width="1920" height="1080" />
-    </state>
-    <state x="733" y="355" key="NewPhpClassDialog/0.0.1920.1080@0.0.1920.1080" timestamp="1578111917463" />
-    <state x="794" y="464" key="NewPhpFileDialog" timestamp="1578455836894">
-      <screen x="0" y="0" width="1920" height="1080" />
-    </state>
-    <state x="794" y="464" key="NewPhpFileDialog/0.0.1920.1080@0.0.1920.1080" timestamp="1578455836894" />
-    <state x="331" y="365" key="com.intellij.ide.util.TipDialog" timestamp="1583134851611">
-      <screen x="0" y="0" width="1920" height="1080" />
-    </state>
-    <state x="331" y="365" key="com.intellij.ide.util.TipDialog/0.0.1920.1080@0.0.1920.1080" timestamp="1583134851611" />
+    <state x="331" y="365" key="com.intellij.ide.util.TipDialog/0.0.1920.1080@0.0.1920.1080" timestamp="1587069698426" />
     <state x="616" y="250" key="run.anything.popup" timestamp="1578454192421">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
     <state x="616" y="250" key="run.anything.popup/0.0.1920.1080@0.0.1920.1080" timestamp="1578454192421" />
-    <state x="616" y="193" width="670" height="676" key="search.everywhere.popup" timestamp="1578543837451">
+    <state x="616" y="193" width="672" height="676" key="search.everywhere.popup" timestamp="1587106581063">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state x="616" y="193" width="670" height="676" key="search.everywhere.popup/0.0.1920.1080@0.0.1920.1080" timestamp="1578543837451" />
+    <state x="616" y="193" width="672" height="676" key="search.everywhere.popup/0.0.1920.1080@0.0.1920.1080" timestamp="1587106581063" />
   </component>
 </project>

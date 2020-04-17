@@ -1,6 +1,8 @@
 <?php
 
 namespace App\Http\Controllers\admin;
+use App\Http\Controllers\MovieController;
+use Barryvdh\DomPDF\PDF;
 use Carbon\Carbon;
 use App\Http\Controllers\Controller;
 use App\Movie;
@@ -61,25 +63,87 @@ class AdminController extends Controller
             return view('error_page.404page');
         }
     }
-    
 
+    public static function getNumberOMovieByDate($date){
+        $from = date('1990/01/01');
+        $to = date($date);
+        $num = DB::table('movie')->whereBetween('created_at', [$from, $to])->get()->count();
+        $num2 = DB::table('movie')->whereBetween('deleted_at', [$from, $to])->get()->count();
+
+        return $num-$num2;
+    }
+    public static function  Reverse($array)
+    {
+        return(array_reverse($array));
+    }
+    public static function getPercentGenres(){
+        $arrayPercent = array();
+        $total = DB::table('movie_genres')->get()->count();
+        for($i =1 ;$i<=10;$i++){
+            $percent = DB::table('movie_genres')->where('gen_id','=',$i)->count();
+            $percent = $percent/$total*100;
+            array_push($arrayPercent,round($percent,2));
+        }
+        array_push($arrayPercent,round(100 - array_sum($arrayPercent),2));
+        return $arrayPercent;
+    }
     public function index(){
         try {
+            $movieNumber = MovieController::getNumMoVie();
+            $genresNumber = MovieController::getAllGenres()->count();
+            $memberNumber = DB::table('users')->get()->count();
+            $thismonth = Carbon::now();
+            $value = array();
+            for($i = $thismonth->month;$i >= 1 ;$i--){
+                $numMovie  = AdminController::getNumberOMovieByDate($thismonth);
+                array_push($value,$numMovie);
+                $thismonth = $thismonth->subMonth();
+            }
+            $deleted = DB::table('movie')->whereNotNull('deleted_at')->get()->count();
 
-//            dd($rating);
-            return view('admin.index');
+            $value = AdminController::Reverse($value);
+            $arrayPercent = AdminController::getPercentGenres();
+            return view('admin.index',compact('movieNumber','genresNumber','memberNumber','value','arrayPercent','deleted'));
 
         } catch (\Exception $e) {
             return view('error_page.404page');
         }
     }
+    public function print(){
+        try {
+            $movieNumber = MovieController::getNumMoVie();
+            $genresNumber = MovieController::getAllGenres()->count();
+            $memberNumber = DB::table('users')->get()->count();
+            $thismonth = Carbon::now();
+            $value = array();
+            for($i = $thismonth->month;$i >= 1 ;$i--){
+                $numMovie  = AdminController::getNumberOMovieByDate($thismonth);
+                array_push($value,$numMovie);
+                $thismonth = $thismonth->subMonth();
+            }
+            $deleted = DB::table('movie')->whereNotNull('deleted_at')->get()->count();
 
+            $value = AdminController::Reverse($value);
+            $arrayPercent = AdminController::getPercentGenres();
+            return view('admin.print',compact('movieNumber','genresNumber','memberNumber','value','arrayPercent','deleted'));
+
+        } catch (\Exception $e) {
+            return view('error_page.404page');
+        }
+    }
+    public function getTop5Movie(){
+        try {
+            $movie_ratings = DB::table('movie_rating')->get();
+            return view('admin.vote', compact('movie_ratings'));
+        } catch (\Throwable $e) {
+            return view('error_page.404page');
+        }
+
+    }
     public function showMovieByID(Request $request){
         if ($request->has(['mov_id'])){
             $movie = Movie::get_movie_by_id($request->mov_id);
             $chapters = MovieChapter::get_all_chapter_by_movie_id($request->mov_id);
-            //dd($movie);
-            //dd($chapters);
             return view('admin.edit_movie',compact('movie','chapters'));
         }
 
@@ -131,7 +195,7 @@ class AdminController extends Controller
         }else{
             echo $checkDate;
         }*/
-        /*$this->validate($request, 
+        /*$this->validate($request,
             [
                 'movieTitle'=>'required|min:3|max:50',
                 'year'=>'required|numeric',
@@ -150,7 +214,7 @@ class AdminController extends Controller
 
             ]
         );
-        
+
         return redirect('admin/add_movie')->with('thongbao', 'Successfull!');*/
         //echo $request->movieTitle;
     }

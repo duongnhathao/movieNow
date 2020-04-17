@@ -1,64 +1,35 @@
 <footer class="site-footer">
     <div class="container">
         <div class="row">
-            <div class="col-md-2">
+            <div class="col-md-4">
                 <div class="widget">
                     <h3 class="widget-title">About Us</h3>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quia tempore vitae mollitia nesciunt saepe cupiditate</p>
+                    <p>This product has developed by fresher</p>
                 </div>
             </div>
-            <div class="col-md-2">
-                <div class="widget">
-                    <h3 class="widget-title">Recent Review</h3>
-                    <ul class="no-bullet">
-                        <li><a href="#">Lorem ipsum dolor</a></li>
-                        <li><a href="#">Sit amet consecture</a></li>
-                        <li><a href="#">Dolorem respequem</a></li>
-                        <li><a href="#">Invenore veritae</a></li>
-                    </ul>
-                </div>
-            </div>
-            <div class="col-md-2">
+
+            <div class="col-md-4">
                 <div class="widget">
                     <h3 class="widget-title">Help Center</h3>
                     <ul class="no-bullet">
-                        <li><a href="#">Lorem ipsum dolor</a></li>
-                        <li><a href="#">Sit amet consecture</a></li>
-                        <li><a href="#">Dolorem respequem</a></li>
-                        <li><a href="#">Invenore veritae</a></li>
+
+                        <li><a href="mailto:duongnhathao001@gmail.com">Contact us</a></li>
+
                     </ul>
                 </div>
             </div>
-            <div class="col-md-2">
-                <div class="widget">
-                    <h3 class="widget-title">Join Us</h3>
-                    <ul class="no-bullet">
-                        <li><a href="#">Lorem ipsum dolor</a></li>
-                        <li><a href="#">Sit amet consecture</a></li>
-                        <li><a href="#">Dolorem respequem</a></li>
-                        <li><a href="#">Invenore veritae</a></li>
-                    </ul>
-                </div>
-            </div>
-            <div class="col-md-2">
+
+            <div class="col-md-4">
                 <div class="widget">
                     <h3 class="widget-title">Social Media</h3>
                     <ul class="no-bullet">
-                        <li><a href="#">Facebook</a></li>
-                        <li><a href="#">Twitter</a></li>
-                        <li><a href="#">Google+</a></li>
-                        <li><a href="#">Pinterest</a></li>
+                        <li><a href="https://www.facebook.com/haonhatt1712">Facebook</a></li>
+                        <li><a href="https://twitter.com/DuongNhatHao4">Twitter</a></li>
+                        <li><a href="mailto:duongnhathao001@gmail.com">Google+</a></li>
                     </ul>
                 </div>
             </div>
-            <div class="col-md-2">
-                <div class="widget">
-                    <h3 class="widget-title">Newsletter</h3>
-                    <form action="#" class="subscribe-form">
-                        <input type="text" placeholder="Email Address">
-                    </form>
-                </div>
-            </div>
+
         </div> <!-- .row -->
 
         <div class="colophon">Copyright 2014 Company name, Designed by Themezy. All rights reserved</div>

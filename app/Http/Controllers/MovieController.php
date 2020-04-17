@@ -141,7 +141,7 @@ class MovieController extends Controller
             return $sum_rate / count($rated) ;
         else return 0;
     }
-    public function getAllGenres()
+    public static function getAllGenres()
     {
         $db = Movie::get_all_genres();
         return $db;
@@ -176,6 +176,12 @@ class MovieController extends Controller
         if ($genre == $genre_select) {
             echo "selected";
         }
+    }
+    public static  function getNumMoVie(){
+        $ddb = DB::table('movie')
+            ->select('mov_id')
+            ->get();
+        return $ddb->count();
     }
     public static function get_top_x_movie_just_update($x_top){
         $ddb =  DB::table('movie_chapter')

@@ -17,7 +17,7 @@
                 <li class="menu-item @yield('current-review')"><a href="/review" style="color: red;">Movie reviews</a>
                 </li>
                 {{--                <li class="menu-item @yield('current-joinus')"><a href="">Join us</a></li>--}}
-                <li class="menu-item @yield('current-contact')"><a href="">Contact</a></li>
+                <li class="menu-item @yield('current-contact')"><a href="/about">Contact</a></li>
 {{--                @if(!is_null($user))--}}
 
 {{--                    <li class="menu-item current-menu-item">--}}

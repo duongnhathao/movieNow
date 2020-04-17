@@ -34,7 +34,7 @@ Route::get('/review','MovieController@getReview');
 Route::get('/genres/{gen_title}','MovieController@getByGenTitle');
 
 
-//admin 
+//admin
 Route::get('admin/dashboard','admin\AdminController@index');
 Route::get('admin/table','admin\AdminController@table');
 Route::get('admin/vote','admin\AdminController@vote');
@@ -62,7 +62,7 @@ Route::post('uploadFile','admin\AdminController@replaceFilm')->name('replaceFilm
 Route::post('deleteChapter','admin\AdminController@deleteChapter')->name('deleteChapter');
 
 
-
+Route::get('/admin/print', 'admin\AdminController@print');
 
 
 
