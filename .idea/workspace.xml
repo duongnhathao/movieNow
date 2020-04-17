@@ -1,27 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="5f7f1285-a085-4b9b-a16d-51f24d262aee" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/movienow.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/movienow.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/MovieController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/MovieController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/admin/AdminController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/admin/AdminController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bootstrap/app.php" beforeDir="false" afterPath="$PROJECT_DIR$/bootstrap/app.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/app.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/app.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2019_12_19_112502_create_movie_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2019_12_19_112502_create_movie_table.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2019_12_19_121214_create_movie_rating_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2019_12_19_121214_create_movie_rating_table.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/css_v2/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/css_v2/style.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/js/demo/chart-area-demo.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/js/demo/chart-area-demo.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/js/demo/chart-pie-demo.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/js/demo/chart-pie-demo.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/admin/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/index.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/layouts_v2/footer.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layouts_v2/footer.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/layouts_v2/navbar.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layouts_v2/navbar.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/movie_v2/about.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/movie_v2/about.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
-    </list>
+    <list default="true" id="5f7f1285-a085-4b9b-a16d-51f24d262aee" name="Default Changelist" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -198,7 +178,7 @@
       <workItem from="1582720896782" duration="24000" />
       <workItem from="1583134829057" duration="1158000" />
       <workItem from="1587069558353" duration="93000" />
-      <workItem from="1587069698722" duration="29206000" />
+      <workItem from="1587069698722" duration="29660000" />
     </task>
     <servers />
   </component>
