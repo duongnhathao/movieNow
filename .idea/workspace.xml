@@ -2,19 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="5f7f1285-a085-4b9b-a16d-51f24d262aee" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/app/Http/Controllers/ViewerController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/MovieController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/MovieController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Controllers/admin/AdminController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/admin/AdminController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2019_12_19_112502_create_movie_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2019_12_19_112502_create_movie_table.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2019_12_19_121214_create_movie_rating_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2019_12_19_121214_create_movie_rating_table.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/seeds/MovieRatingSeeder.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/seeds/MovieRatingSeeder.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/js/demo/chart-area-demo.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/js/demo/chart-area-demo.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/admin/admin_layouts/sidebar.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/admin_layouts/sidebar.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/admin/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/index.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/admin/print.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/print.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/storage/framework/views/c8f0660883071596924cffbf045961e3b347f2b7.php" beforeDir="false" afterPath="$PROJECT_DIR$/storage/framework/views/c8f0660883071596924cffbf045961e3b347f2b7.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/storage/framework/views/c9c5e1030400aad3b414ec9bee912403b828ae36.php" beforeDir="false" afterPath="$PROJECT_DIR$/storage/framework/views/c9c5e1030400aad3b414ec9bee912403b828ae36.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/storage/framework/views/f873d2f3ae9d76c718f6cf6c5a13c5e323a3ab10.php" beforeDir="false" afterPath="$PROJECT_DIR$/storage/framework/views/f873d2f3ae9d76c718f6cf6c5a13c5e323a3ab10.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/seeds/MovieSeeder.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/seeds/MovieSeeder.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/admin/vote.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/vote.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/framework/views/f094cb3845c8d2294e77031bfeecdba9d31a67f1.php" beforeDir="false" afterPath="$PROJECT_DIR$/storage/framework/views/f094cb3845c8d2294e77031bfeecdba9d31a67f1.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/storage/logs/laravel.log" beforeDir="false" afterPath="$PROJECT_DIR$/storage/logs/laravel.log" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -128,12 +121,16 @@
     </include_path>
   </component>
   <component name="ProjectId" id="1VugyNQnzaKedyiW2AuTrLNJ8la" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showExcludedFiles" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/app/Http/Controllers" />
@@ -193,18 +190,21 @@
       <workItem from="1582720896782" duration="24000" />
       <workItem from="1583134829057" duration="1158000" />
       <workItem from="1587069558353" duration="93000" />
-      <workItem from="1587069698722" duration="43196000" />
+      <workItem from="1587069698722" duration="45170000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
   </component>
+  <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+  </component>
   <component name="WindowStateProjectService">
-    <state x="690" y="296" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1587105912085">
+    <state x="690" y="296" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1587177835531">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state x="690" y="296" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1920.1080@0.0.1920.1080" timestamp="1587105912085" />
+    <state x="690" y="296" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1920.1080@0.0.1920.1080" timestamp="1587177835531" />
     <state x="964" y="356" key="FileChooserDialogImpl" timestamp="1578452836060">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
@@ -225,10 +225,10 @@
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
     <state x="616" y="250" key="run.anything.popup/0.0.1920.1080@0.0.1920.1080" timestamp="1578454192421" />
-    <state x="616" y="193" width="672" height="676" key="search.everywhere.popup" timestamp="1587106581063">
+    <state x="616" y="193" width="672" height="676" key="search.everywhere.popup" timestamp="1587178061109">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state x="616" y="193" width="672" height="676" key="search.everywhere.popup/0.0.1920.1080@0.0.1920.1080" timestamp="1587106581063" />
+    <state x="616" y="193" width="672" height="676" key="search.everywhere.popup/0.0.1920.1080@0.0.1920.1080" timestamp="1587178061109" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

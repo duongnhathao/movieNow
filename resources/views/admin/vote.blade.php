@@ -18,24 +18,22 @@
                         <th>ID Movie</th>
                         <th>ID persion</th>
                         <th>Review Star</th>
-                        <th></th>
                     </tr>
                     </thead>
                     <tfoot>
                     <tr>
                         <th>ID Movie</th>
-                        <th>ID persion</th>
+                        <th>Viewer(ID persion)</th>
                         <th>Review Star</th>
-                        <th></th>
                     </tr>
                     </tfoot>
                     <tbody>
                     @foreach($movie_ratings as $movie_rating)
                         <tr>
-                            <td>{{$movie_rating->mov_id}}</td>
-                            <td>{{$movie_rating->rev_id}}</td>
+                            <td>{{\App\Http\Controllers\MovieController::getName($movie_rating->mov_id)}}</td>
+                            <td>{{\App\Http\Controllers\ViewerController::getNameViewer($movie_rating->rev_id)}}({{$movie_rating->rev_id}})</td>
                             <td>{{$movie_rating->rev_starts}}</td>
-                            
+
                             <!--<td>
                                 <form action="{{ url('edit-movie') }}" method="POST" role="form">
                                     <input name="mov_id" type="hidden" value="{{$movie_rating->mov_id}}">

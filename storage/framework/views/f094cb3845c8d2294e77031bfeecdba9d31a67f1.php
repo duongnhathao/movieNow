@@ -17,24 +17,22 @@
                         <th>ID Movie</th>
                         <th>ID persion</th>
                         <th>Review Star</th>
-                        <th></th>
                     </tr>
                     </thead>
                     <tfoot>
                     <tr>
                         <th>ID Movie</th>
-                        <th>ID persion</th>
+                        <th>Viewer(ID persion)</th>
                         <th>Review Star</th>
-                        <th></th>
                     </tr>
                     </tfoot>
                     <tbody>
                     <?php $__currentLoopData = $movie_ratings; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $movie_rating): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
                         <tr>
-                            <td><?php echo e($movie_rating->mov_id); ?></td>
-                            <td><?php echo e($movie_rating->rev_id); ?></td>
+                            <td><?php echo e(\App\Http\Controllers\MovieController::getName($movie_rating->mov_id)); ?></td>
+                            <td><?php echo e(\App\Http\Controllers\ViewerController::getNameViewer($movie_rating->rev_id)); ?>(<?php echo e($movie_rating->rev_id); ?>)</td>
                             <td><?php echo e($movie_rating->rev_starts); ?></td>
-                            
+
                             <!--<td>
                                 <form action="<?php echo e(url('edit-movie')); ?>" method="POST" role="form">
                                     <input name="mov_id" type="hidden" value="<?php echo e($movie_rating->mov_id); ?>">
@@ -64,4 +62,5 @@
     <script src="<?php echo e(asset('js/demo/datatables-demo.js')); ?>" type="text/javascript" defer></script>
 
 <?php $__env->stopSection(); ?>
+
 <?php echo $__env->make('admin.admin_layouts.master', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?><?php /**PATH C:\Users\PC ASUS\Desktop\CNPM-WEBSITE\movienow\movienow\resources\views/admin/vote.blade.php ENDPATH**/ ?>

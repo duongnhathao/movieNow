@@ -38,6 +38,7 @@ class AdminController extends Controller
         }
     }
 
+
     public function member(){
         try {
             $member = DB::table('users')->get();
