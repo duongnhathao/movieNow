@@ -40,10 +40,13 @@ class MovieController extends Controller
             return view('error_page.404page');
         }
     }
-
-    public function getView($movie_id)
+    public static function getStart($movie_id)
     {
-
+        return Movie::get_movie_by_id($movie_id)->nums_start;
+    }
+    public static function getName($movie_id)
+    {
+        return Movie::get_movie_by_id($movie_id)->mov_title;
     }
 
     public function getChapter($mov_title, $chapter_nums)
@@ -62,6 +65,11 @@ class MovieController extends Controller
 
     }
 
+    public static function getNumofChapter()
+    {
+
+        return DB::table('movie_chapter')->get()->count();
+    }
     public function getAct($id)
     {
         $act = MovieCast::get_all_cast_by_movie_id($id);

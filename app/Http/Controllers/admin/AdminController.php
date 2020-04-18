@@ -72,6 +72,50 @@ class AdminController extends Controller
 
         return $num-$num2;
     }
+    public static function getTopXMovieRating($x_top){
+        $ddb =  DB::table('movie')
+            ->select('mov_id')
+            ->distinct()
+            ->orderByDesc('nums_start')
+            ->take($x_top)
+            ->get();
+        return $ddb;
+
+
+    }
+    public static function getNumberORatingByDate(){
+        $from = date('1990/01/01');
+        $to = date(Carbon::now());
+        $list_movie = DB::table('movie')->select('mov_id')->get();
+
+        foreach ($list_movie as $movie){
+            $num = DB::table('movie_rating')->where('mov_id','=',$movie->mov_id)->whereBetween('rev_date', [$from, $to])->select('rev_starts')->get();
+            $total = 0;
+            foreach ($num as $n){
+                $total += $n->rev_starts;
+            }
+            DB::table('movie')->where('mov_id','=',$movie->mov_id)->update(array('nums_start'=>$total,));
+        }
+
+//        dd($list_movie);
+    }
+    public static function getNumberRatingByDate($date,$mov_id){
+        $from = date('1990/01/01');
+        $to = date($date);
+        $list_movie = DB::table('movie')->where('mov_id','=',$mov_id)->get();
+
+        foreach ($list_movie as $movie){
+            $num = DB::table('movie_rating')->where('mov_id','=',$movie->mov_id)->whereBetween('rev_date', [$from, $to])->select('rev_starts')->get();
+            $total = 0;
+            foreach ($num as $n){
+                $total += $n->rev_starts;
+            }
+
+        }
+        return $total;
+
+//        dd($list_movie);
+    }
     public static function  Reverse($array)
     {
         return(array_reverse($array));
@@ -93,6 +137,7 @@ class AdminController extends Controller
             $genresNumber = MovieController::getAllGenres()->count();
             $memberNumber = DB::table('users')->get()->count();
             $thismonth = Carbon::now();
+            $total_rating = AdminController::getNumberORatingByDate($thismonth);
             $value = array();
             for($i = $thismonth->month;$i >= 1 ;$i--){
                 $numMovie  = AdminController::getNumberOMovieByDate($thismonth);
@@ -100,10 +145,10 @@ class AdminController extends Controller
                 $thismonth = $thismonth->subMonth();
             }
             $deleted = DB::table('movie')->whereNotNull('deleted_at')->get()->count();
-
+            $top5 = self::getTopXMovieRating(5);
             $value = AdminController::Reverse($value);
             $arrayPercent = AdminController::getPercentGenres();
-            return view('admin.index',compact('movieNumber','genresNumber','memberNumber','value','arrayPercent','deleted'));
+            return view('admin.index',compact('movieNumber','genresNumber','memberNumber','value','arrayPercent','deleted','top5'));
 
         } catch (\Exception $e) {
             return view('error_page.404page');
@@ -115,6 +160,7 @@ class AdminController extends Controller
             $genresNumber = MovieController::getAllGenres()->count();
             $memberNumber = DB::table('users')->get()->count();
             $thismonth = Carbon::now();
+            $total_rating = AdminController::getNumberORatingByDate($thismonth);
             $value = array();
             for($i = $thismonth->month;$i >= 1 ;$i--){
                 $numMovie  = AdminController::getNumberOMovieByDate($thismonth);
@@ -122,10 +168,10 @@ class AdminController extends Controller
                 $thismonth = $thismonth->subMonth();
             }
             $deleted = DB::table('movie')->whereNotNull('deleted_at')->get()->count();
-
+            $top5 = self::getTopXMovieRating(5);
             $value = AdminController::Reverse($value);
             $arrayPercent = AdminController::getPercentGenres();
-            return view('admin.print',compact('movieNumber','genresNumber','memberNumber','value','arrayPercent','deleted'));
+            return view('admin.print',compact('movieNumber','genresNumber','memberNumber','value','arrayPercent','deleted','top5'));
 
         } catch (\Exception $e) {
             return view('error_page.404page');

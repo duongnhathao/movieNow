@@ -36,7 +36,7 @@ var myLineChart = new Chart(ctx, {
     datasets: [{
       label: "Movie",
       lineTension: 0.3,
-      backgroundColor: "rgba(78, 115, 223, 0.05)",
+      backgroundColor: "rgb(0,255,255)",
       borderColor: "rgba(78, 115, 223, 1)",
       pointRadius: 3,
       pointBackgroundColor: "rgba(78, 115, 223, 1)",
@@ -65,8 +65,8 @@ var myLineChart = new Chart(ctx, {
           unit: 'date'
         },
         gridLines: {
-          display: false,
-          drawBorder: false
+          display: true,
+          drawBorder: true
         },
         ticks: {
           maxTicksLimit: 7

@@ -24,7 +24,7 @@ class CreateMovieTable extends Migration
             $table->char('mov_rel_country',5);
             $table->text('mov_img');
             $table->longText('mov_description');
-            $table->bigInteger('nums_start')->default(0);
+            $table->float('nums_start')->default(0);
             $table->date('created_at')->default(Carbon::now());
             $table->date('deleted_at')->nullable(true);
 

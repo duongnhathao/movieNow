@@ -15,6 +15,7 @@ class CreateMovieRatingTable extends Migration
     public function up()
     {
         Schema::create('movie_rating', function (Blueprint $table) {
+            $table->bigIncrements('mov_rating_id');
             $table->bigInteger('mov_id')->unsigned();
             $table->bigInteger('rev_id')->unsigned();
             $table->float('rev_starts')->nullable(false);

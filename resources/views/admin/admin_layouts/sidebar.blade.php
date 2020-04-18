@@ -2,7 +2,7 @@
 <ul class="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion" id="accordionSidebar">
 
     <!-- Sidebar - Brand -->
-    <a class="sidebar-brand d-flex align-items-center justify-content-center" href="index.html">
+    <a class="sidebar-brand d-flex align-items-center justify-content-center" href="/admin/dashboard">
         <div class="sidebar-brand-icon rotate-n-15">
             <i class="fas fa-laugh-wink"></i>
         </div>
@@ -89,20 +89,20 @@
 
     <!-- Nav Item - Movie -->
     <li class="nav-item">
-        <a class="nav-link" href="table">
+        <a class="nav-link" href="/admin/table">
             <i class="fas fa-fw fa-chart-area"></i>
             <span>Movie</span></a>
     </li>
 
     <!-- Nav Item - Votes Movie -->
     <li class="nav-item">
-        <a class="nav-link" href="vote">
+        <a class="nav-link" href="/admin/vote">
             <i class="fas fa-fw fa-table"></i>
             <span>Votes Movie</span></a>
     </li>
     <!-- Nav Item -Member -->
     <li class="nav-item">
-        <a class="nav-link" href="member">
+        <a class="nav-link" href="/admin/member">
             <i class="fas fa-fw fa-user"></i>
             <span>Member</span>
         </a>

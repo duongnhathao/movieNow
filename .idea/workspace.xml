@@ -1,7 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="5f7f1285-a085-4b9b-a16d-51f24d262aee" name="Default Changelist" comment="" />
+    <list default="true" id="5f7f1285-a085-4b9b-a16d-51f24d262aee" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/MovieController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/MovieController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/admin/AdminController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/admin/AdminController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2019_12_19_112502_create_movie_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2019_12_19_112502_create_movie_table.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2019_12_19_121214_create_movie_rating_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2019_12_19_121214_create_movie_rating_table.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/seeds/MovieRatingSeeder.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/seeds/MovieRatingSeeder.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/js/demo/chart-area-demo.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/js/demo/chart-area-demo.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/admin/admin_layouts/sidebar.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/admin_layouts/sidebar.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/admin/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/index.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/admin/print.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/print.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/framework/views/c8f0660883071596924cffbf045961e3b347f2b7.php" beforeDir="false" afterPath="$PROJECT_DIR$/storage/framework/views/c8f0660883071596924cffbf045961e3b347f2b7.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/framework/views/c9c5e1030400aad3b414ec9bee912403b828ae36.php" beforeDir="false" afterPath="$PROJECT_DIR$/storage/framework/views/c9c5e1030400aad3b414ec9bee912403b828ae36.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/framework/views/f873d2f3ae9d76c718f6cf6c5a13c5e323a3ab10.php" beforeDir="false" afterPath="$PROJECT_DIR$/storage/framework/views/f873d2f3ae9d76c718f6cf6c5a13c5e323a3ab10.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/logs/laravel.log" beforeDir="false" afterPath="$PROJECT_DIR$/storage/logs/laravel.log" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -178,7 +193,7 @@
       <workItem from="1582720896782" duration="24000" />
       <workItem from="1583134829057" duration="1158000" />
       <workItem from="1587069558353" duration="93000" />
-      <workItem from="1587069698722" duration="29660000" />
+      <workItem from="1587069698722" duration="43196000" />
     </task>
     <servers />
   </component>
@@ -202,6 +217,10 @@
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
     <state x="331" y="365" key="com.intellij.ide.util.TipDialog/0.0.1920.1080@0.0.1920.1080" timestamp="1587069698426" />
+    <state x="683" y="183" key="refactoring.ChangeSignatureDialog" timestamp="1587145554860">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state x="683" y="183" key="refactoring.ChangeSignatureDialog/0.0.1920.1080@0.0.1920.1080" timestamp="1587145554860" />
     <state x="616" y="250" key="run.anything.popup" timestamp="1578454192421">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
@@ -210,5 +229,21 @@
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
     <state x="616" y="193" width="672" height="676" key="search.everywhere.popup/0.0.1920.1080@0.0.1920.1080" timestamp="1587106581063" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="php">
+          <url>file://$PROJECT_DIR$/resources/views/admin/index.blade.php</url>
+          <line>13</line>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="php">
+          <url>file://$PROJECT_DIR$/resources/views/admin/print.blade.php</url>
+          <line>234</line>
+          <option name="timeStamp" value="2" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>
