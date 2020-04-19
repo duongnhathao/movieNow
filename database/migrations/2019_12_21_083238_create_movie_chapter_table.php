@@ -21,6 +21,8 @@ class CreateMovieChapterTable extends Migration
             $table->text('chapter_link');
             $table->foreign('mov_id')->references('mov_id')->on('movie')->onDelete('cascade');
             $table->timestamp("chapter_time_upload");
+            $table->time("deleted_at")->nullable(true);
+
         });
     }
 

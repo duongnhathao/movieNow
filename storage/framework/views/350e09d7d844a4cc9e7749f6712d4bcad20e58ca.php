@@ -3,6 +3,7 @@
 
 
 
+<?php $__env->startSection('title', 'Movie Review || MovieNow '); ?>
 
 <?php $__env->startSection('current-review', 'current-menu-item'); ?>
 
@@ -41,7 +42,7 @@
                             <div class="movie-title">
                                 <div class="star-rating" title="Rated 3.00 out of 5">
                                     <span
-                                        style="width:<?php echo e(\App\Http\Controllers\MovieController::getRating($movie->mov_id)); ?>%"><strong
+                                        style="width:<?php echo e(\App\Http\Controllers\MovieController::getRatings($movie->mov_id)); ?>%"><strong
                                             class="rating">4.00</strong> out of 5</span></div>
                                 <br>
                                 <a href="/movie/<?php echo e($movie->mov_title); ?>"><?php echo e($movie->mov_title); ?></a></div>

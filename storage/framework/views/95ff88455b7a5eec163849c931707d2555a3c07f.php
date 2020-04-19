@@ -10,15 +10,15 @@
             <h6 class="m-0 font-weight-bold text-primary">Member Data</h6>
         </div>
 
-        <div class="card-body">
-            <a href="add_member" class="btn btn-success btn-icon-split">
-                <span class="icon text-white-50">
-                    <i class="fas fa-check"></i>
-                </span>
-                            
-                <span class="text">Add Member</span>
-            </a>
-        </div>
+
+
+
+
+
+
+
+
+
 
         <div class="card-body">
             <div class="table-responsive">
@@ -57,7 +57,7 @@
                                     <span class="text">Edit</span>
                                 </button>
                             </form>
-                                
+
                             </td>
                         </tr>
                     <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
@@ -75,4 +75,5 @@
     <script src="<?php echo e(asset('js/demo/datatables-demo.js')); ?>" type="text/javascript" defer></script>
 
 <?php $__env->stopSection(); ?>
+
 <?php echo $__env->make('admin.admin_layouts.master', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?><?php /**PATH C:\Users\PC ASUS\Desktop\CNPM-WEBSITE\movienow\movienow\resources\views/admin/member.blade.php ENDPATH**/ ?>

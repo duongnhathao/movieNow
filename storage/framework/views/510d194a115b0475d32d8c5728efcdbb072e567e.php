@@ -1,4 +1,4 @@
-<?php $__env->startSection('title', 'Movie Review'); ?>
+<?php $__env->startSection('title', 'About us || MovieNow'); ?>
 
 
 

@@ -1,8 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title></title>@include("admin.admin_layouts.header")
+    <title>MovieNow || Print Report </title>@include("admin.admin_layouts.header")
     <link href="{{asset('vendor/datatables/dataTables.bootstrap4.min.css')}}" rel="stylesheet">
+    <link rel="icon" href="{{asset('/image/circle-cropped.png')}}">
 
     @yield('link')
 </head>
@@ -235,7 +236,7 @@
                         <div class="row">
 
                             <!-- Content Column -->
-                            <div class="col-lg-12 mb-4">
+                            <div class="col-lg-6 mb-4">
 
                                 <!-- Project Card Example -->
                                 <div class="card shadow     ">

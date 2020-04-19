@@ -1,3 +1,5 @@
+<?php $__env->startSection('title', 'Welcome || MovieNow '); ?>
+
 <?php $__env->startSection('current-home', 'current-menu-item'); ?>
 
 
@@ -23,12 +25,14 @@
 
                 </div> <!-- .row -->
                 <div class="row">
-                    <h2 class="section-title">Suggestion View</h2>
-
-
-
-
-
+                    <h2 class="section-title">Suggestion Movie</h2>
+                    <?php $__currentLoopData = $top_movie_rating; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $top): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
+                        <div class="col-lg-2 col-sm-6 col-md-3">
+                            <div class="latest-movie">
+                                <a href="movie/<?php echo e($top->mov_title); ?>"><img src="<?php echo e(asset($top->mov_img)); ?>" alt="Movie 3"></a>
+                            </div>
+                        </div>
+                    <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
 
 
 
@@ -46,7 +50,7 @@
 
                 </div> <!-- .row -->
                 <div class="row">
-                    <h2 class="section-title">Latest Movies</h2>
+                    <h2 class="section-title">New updated</h2>
                     <?php $__currentLoopData = $top_10_movie; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $top_lastest): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
                     <div class="col-lg-2 col-sm-6 col-md-3">
                         <div class="latest-movie">

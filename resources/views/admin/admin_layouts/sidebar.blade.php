@@ -1,10 +1,10 @@
 <!-- Sidebar -->
-<ul class="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion" id="accordionSidebar">
+<ul class="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion toggled" id="accordionSidebar">
 
     <!-- Sidebar - Brand -->
     <a class="sidebar-brand d-flex align-items-center justify-content-center" href="/admin/dashboard">
         <div class="sidebar-brand-icon rotate-n-15">
-            <i class="fas fa-laugh-wink"></i>
+            <i class="fas fa-video"></i>
         </div>
         <div class="sidebar-brand-text mx-3">Movie Now</div>
     </a>
@@ -31,33 +31,33 @@
     <li class="nav-item">
         <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="true" aria-controls="collapseTwo">
             <i class="fas fa-fw fa-cog"></i>
-            <span>Components</span>
+            <span>Edit Movie</span>
         </a>
         <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
             <div class="bg-white py-2 collapse-inner rounded">
-                <h6 class="collapse-header">Custom Components:</h6>
-                <a class="collapse-item" href="buttons.html">Buttons</a>
-                <a class="collapse-item" href="cards.html">Cards</a>
+                <h6 class="collapse-header">Movie:</h6>
+                <a class="collapse-item" href="/admin/add_movie">Add Movie</a>
+                <a class="collapse-item" href="#">Add Chapter</a>
             </div>
         </div>
     </li>
 
     <!-- Nav Item - Utilities Collapse Menu -->
-    <li class="nav-item">
-        <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseUtilities" aria-expanded="true" aria-controls="collapseUtilities">
-            <i class="fas fa-fw fa-wrench"></i>
-            <span>Utilities</span>
-        </a>
-        <div id="collapseUtilities" class="collapse" aria-labelledby="headingUtilities" data-parent="#accordionSidebar">
-            <div class="bg-white py-2 collapse-inner rounded">
-                <h6 class="collapse-header">Custom Utilities:</h6>
-                <a class="collapse-item" href="utilities-color.html">Colors</a>
-                <a class="collapse-item" href="utilities-border.html">Borders</a>
-                <a class="collapse-item" href="utilities-animation.html">Animations</a>
-                <a class="collapse-item" href="utilities-other.html">Other</a>
-            </div>
-        </div>
-    </li>
+{{--    <li class="nav-item">--}}
+{{--        <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseUtilities" aria-expanded="true" aria-controls="collapseUtilities">--}}
+{{--            <i class="fas fa-fw fa-wrench"></i>--}}
+{{--            <span>Utilities</span>--}}
+{{--        </a>--}}
+{{--        <div id="collapseUtilities" class="collapse" aria-labelledby="headingUtilities" data-parent="#accordionSidebar">--}}
+{{--            <div class="bg-white py-2 collapse-inner rounded">--}}
+{{--                <h6 class="collapse-header">Custom Utilities:</h6>--}}
+{{--                <a class="collapse-item" href="utilities-color.html">Colors</a>--}}
+{{--                <a class="collapse-item" href="utilities-border.html">Borders</a>--}}
+{{--                <a class="collapse-item" href="utilities-animation.html">Animations</a>--}}
+{{--                <a class="collapse-item" href="utilities-other.html">Other</a>--}}
+{{--            </div>--}}
+{{--        </div>--}}
+{{--    </li>--}}
 
     <!-- Divider -->
     <hr class="sidebar-divider">
@@ -101,11 +101,25 @@
             <span>Votes Movie</span></a>
     </li>
     <!-- Nav Item -Member -->
+{{--    <li class="nav-item">--}}
+{{--        <a class="nav-link" href="/admin/member">--}}
+{{--            <i class="fas fa-fw fa-user"></i>--}}
+{{--            <span>Member</span>--}}
+{{--        </a>--}}
+{{--    </li>--}}
+
     <li class="nav-item">
-        <a class="nav-link" href="/admin/member">
-            <i class="fas fa-fw fa-user"></i>
+        <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapse3" aria-expanded="true" aria-controls="collapseTwo">
+            <i class="fas fa-fw fa-cog"></i>
             <span>Member</span>
         </a>
+        <div id="collapse3" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
+            <div class="bg-white py-2 collapse-inner rounded">
+                <h6 class="collapse-header">About Member</h6>
+                <a class="collapse-item" href="/admin/member">List Member</a>
+                <a class="collapse-item" href="/admin/add_member">Add Member</a>
+            </div>
+        </div>
     </li>
     <!-- Divider -->
     <hr class="sidebar-divider d-none d-md-block">

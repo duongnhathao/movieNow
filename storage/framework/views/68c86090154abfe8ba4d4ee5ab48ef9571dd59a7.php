@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title></title><?php echo $__env->make("admin.admin_layouts.header", \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?>
+    <title>MovieNow || Admin</title><?php echo $__env->make("admin.admin_layouts.header", \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?>
     <link href="<?php echo e(asset('vendor/datatables/dataTables.bootstrap4.min.css')); ?>" rel="stylesheet">
-
+    <link rel="icon" href="<?php echo e(asset('/image/circle-cropped.png')); ?>">
     <?php echo $__env->yieldContent('link'); ?>
 </head>
 <body id="page-top">

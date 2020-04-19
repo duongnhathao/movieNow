@@ -1,4 +1,6 @@
 @extends('layouts_v2.master')
+@section('title', 'Welcome || MovieNow ')
+
 @section('current-home', 'current-menu-item')
 
 
@@ -23,12 +25,14 @@
 
                 </div> <!-- .row -->
                 <div class="row">
-                    <h2 class="section-title">Suggestion View</h2>
-{{--                    <div class="col-sm-6 col-md-3">--}}
-{{--                        <div class="latest-movie">--}}
-{{--                            <a href="#"><img src="{{ asset('dummy/thumb-3.jpg')}}" alt="Movie 3"></a>--}}
-{{--                        </div>--}}
-{{--                    </div>--}}
+                    <h2 class="section-title">Suggestion Movie</h2>
+                    @foreach($top_movie_rating as $top)
+                        <div class="col-lg-2 col-sm-6 col-md-3">
+                            <div class="latest-movie">
+                                <a href="movie/{{$top->mov_title}}"><img src="{{ asset($top->mov_img)}}" alt="Movie 3"></a>
+                            </div>
+                        </div>
+                    @endforeach
 {{--                    <div class="col-sm-6 col-md-3">--}}
 {{--                        <div class="latest-movie">--}}
 {{--                            <a href="#"><img src="{{ asset('dummy/thumb-4.jpg')}}" alt="Movie 4"></a>--}}
@@ -46,7 +50,7 @@
 {{--                    </div>--}}
                 </div> <!-- .row -->
                 <div class="row">
-                    <h2 class="section-title">Latest Movies</h2>
+                    <h2 class="section-title">New updated</h2>
                     @foreach($top_10_movie as $top_lastest)
                     <div class="col-lg-2 col-sm-6 col-md-3">
                         <div class="latest-movie">

@@ -18,14 +18,14 @@
                                     <span class="icon text-white-50">
                                         <i class="fas fa-check"></i>
                                     </span>
-                                                
+
                                     <span class="text">Back to admin page</span>
                                 </a>
                             </td>
                             <td>
-                            <form action="{{url('add-chapter')}}" method="POST" role="form">
+                            <form action="{{url('/admin/add-chapter')}}" method="POST" role="form">
                                 <input name="mov_id" type="hidden" value="{{$movie->mov_id}}">
-                                
+
                                     {{ csrf_field()}}
                                 <button type="submit" class="btn btn-success btn-icon-split">
                                     <span class="icon text-white-50">

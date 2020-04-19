@@ -33,6 +33,10 @@ class MovieCast extends Model
 //       dd($a);
        return $a;
     }
+    public static function get_all_cast()
+    {
+        return DB::table('movie_actor')->distinct()->get();
+    }
     public static function get_all_cast_by_movie_title($mov_title)
     {
         $ddb = self::get_database_actor();

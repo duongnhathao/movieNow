@@ -12,11 +12,11 @@
         <div class="card-header py-3">
             <h6 class="m-0 font-weight-bold text-primary">Add a new movie</h6>
         </div>
-        
+
         <div class="card-body">
-            <div class="container-fluid"> 
-                <div class="row-fluid"> 
-                    <div class="col-md-offset-4 col-md-4" id="box"> 
+            <div class="container-fluid">
+                <div class="row-fluid">
+                    <div class="col-md-offset-4 col-md-4" id="box">
                         <?php if(count($errors)>0): ?>
                             <div class="alert alert-danger">
                                 <?php $__currentLoopData = $errors->all(); $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $err): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
@@ -25,56 +25,64 @@
                             </div>
                         <?php endif; ?>
 
-                        <?php if(session('thongbao')): ?> 
+                        <?php if(session('thongbao')): ?>
                             <div class="alert alert-success">
                                 <?php echo e(session('thongbao')); ?>
 
                             </div>
                         <?php endif; ?>
-                        <h2>Add movie</h2> 
-                        <hr> 
-                        <form class="form-horizontal" action="add_movie" method="POST" id="login_form" enctype="multipart/form-data"> 
-                            
+                        <h2>Add movie</h2>
+                        <hr>
+                        <form class="form-horizontal" action="/admin/add_movie" method="POST" id="login_form" enctype="multipart/form-data">
+
                             <?php echo e(csrf_field()); ?>
 
-                            <fieldset> 
+                            <fieldset>
                                 <table class="table table-bordered" id="movieDataTable" width="100%" cellspacing="0">
                                     <tr>
                                         <td>Movie Title:</td>
-                                        <td><input name="movieTitle" type="text" placeholder="Movie Title"></td>
+                                        <td><input name="movieTitle" type="text" placeholder="Movie Title" required></td>
                                     </tr>
                                     <tr>
-                                        <td>Year of manufacture:</td>
-                                        <td><input type="text" name="year"></td>
+                                        <td>Year:</td>
+                                        <td><input type="number" name="year" min="0" placeholder="Year" required></td>
                                     </tr>
                                     <tr>
                                         <td>Run time (m)</td>
-                                        <td><input type="number" name="time"min="0" max="180"></td>
+                                        <td><input type="number" name="time" min="0" max="400" required></td>
                                     </tr>
                                     <tr>
                                         <td>Language:</td>
-                                        <td><input type="text" name="language"></td>
+                                        <td><input type="text" name="language"  placeholder="language" required></td>
                                     </tr>
+
                                     <tr>
                                         <td>Year of manufacture:</td>
-                                        <td><input type="date" name="yearManufacture" ></td>
+                                        <td><input type="date" name="yearManufacture" required></td>
+                                        <?php if(session('year')): ?>
+
+                                            <div class="alert alert-danger">
+                                                <?php echo e(session('year')); ?>
+
+                                            </div>
+
+                                        <?php endif; ?>
                                     </tr>
                                     <tr>
                                         <td>Movie release country</td>
-                                        <td><input type="text" name="releaseCountry"></td>
+                                        <td><input type="text" name="releaseCountry" maxlength="5" placeholder="country" required></td>
                                     </tr>
                                     <tr>
                                         <td>Images:</td>
-                                        <td><input type="file" name="moviePicture"></td>
+                                        <td><input type="file" name="moviePicture" required></td>
                                     </tr>
                                     <tr>
                                         <td>Movie description:</td>
-                                        <td><input type="text" name="movieDescription"></td>
+                                        <td><input type="text" name="movieDescription" placeholder="Description about movie" required></td>
                                     </tr>
-                                    <tr>
-                                        <td>Movie rating:</td>
-                                        <td><input type="number" name="movieDescription" min="0" max="5"></td>
-                                    </tr>
+
+                                        <input type="number" name="movieRating" min="0" max="0" value="0" hidden>
+
                                 </table>
 
                                 <div class="card-body">
@@ -84,12 +92,12 @@
                                         </span>
                                         <span class="text">Submit</span>
                                     </button>
-                                    </div>
-                            </fieldset> 
-                        </form> 
-                    </div> 
+                                </div>
+                            </fieldset>
+                        </form>
+                    </div>
                 </div>
-            </div>   
+            </div>
         </div>
     </div>
 
@@ -102,4 +110,5 @@
     <!--<script src="js/jquery-1.11.1.min.js"></script>-->
 
 <?php $__env->stopSection(); ?>
+
 <?php echo $__env->make('admin.admin_layouts.master', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?><?php /**PATH C:\Users\PC ASUS\Desktop\CNPM-WEBSITE\movienow\movienow\resources\views/admin/add_movie.blade.php ENDPATH**/ ?>

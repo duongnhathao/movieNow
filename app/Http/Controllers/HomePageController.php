@@ -22,9 +22,10 @@ class HomePageController extends Controller
 
             }
             $top_10_movie = $this->getTopXLastestMovie(10);
-//            dd($top_10_movie);
+            $top_movie_rating = MovieController::getTopXMovieRating(6);
+//            dd($top_movie_rating);
             $mov = Movie::get_all_movie();
-                return \view('movie_v2.index', compact('mov', 'top_10_movie','user'));
+                return \view('movie_v2.index', compact('mov', 'top_10_movie','user','top_movie_rating'));
 
 
         } catch (\Exception $e) {
@@ -46,6 +47,7 @@ class HomePageController extends Controller
     public function getTopXLastestMovie($x_top)
     {
         $id_top_X_lastest_movie = MovieController::get_top_x_movie_just_update($x_top);
+//        dd($id_top_X_lastest_movie);
         $top_X_movie = collect();
         foreach ($id_top_X_lastest_movie as $id_movietop) {
             $top_X_movie->push(Movie::get_movie_by_id($id_movietop->mov_id));

@@ -3,6 +3,7 @@
 {{--@section('current-review', '')--}}
 {{--@section('current-joinus', '')--}}
 {{--@section('current-contact', '')--}}
+@section('title', 'Movie Review || MovieNow ')
 
 @section('current-review', 'current-menu-item')
 @extends('layouts_v2.master')
@@ -41,7 +42,7 @@
                             <div class="movie-title">
                                 <div class="star-rating" title="Rated 3.00 out of 5">
                                     <span
-                                        style="width:{{ \App\Http\Controllers\MovieController::getRating($movie->mov_id)}}%"><strong
+                                        style="width:{{ \App\Http\Controllers\MovieController::getRatings($movie->mov_id)}}%"><strong
                                             class="rating">4.00</strong> out of 5</span></div>
                                 <br>
                                 <a href="/movie/{{$movie->mov_title}}">{{$movie->mov_title}}</a></div>

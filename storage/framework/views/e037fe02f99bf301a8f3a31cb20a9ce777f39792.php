@@ -1,4 +1,62 @@
 <?php $__env->startSection('title', $movie->mov_title); ?>
+<?php $__env->startSection('add_css'); ?>
+    <style>
+        .star-cb-group {
+            /* remove inline-block whitespace */
+            font-size: 0;
+            /* flip the order so we can use the + and ~ combinators */
+            unicode-bidi: bidi-override;
+            direction: rtl;
+            /* the hidden clearer */
+        }
+        .star-cb-group * {
+            font-size: 2rem;
+        }
+        .star-cb-group > input {
+            display: none;
+        }
+        .star-cb-group > input + label {
+            /* only enough room for the star */
+            display: inline-block;
+            overflow: hidden;
+            text-indent: 9999px;
+            width: 1em;
+            white-space: nowrap;
+            cursor: pointer;
+        }
+        .star-cb-group > input + label:before {
+            display: inline-block;
+            text-indent: -9999px;
+            content: '\2606';
+            color: #888;
+        }
+        .star-cb-group > input:checked ~ label:before, .star-cb-group > input + label:hover ~ label:before, .star-cb-group > input + label:hover:before {
+            content: '\2605';
+            color: #e52;
+            text-shadow: 0 0 1px #333;
+        }
+        .star-cb-group > .star-cb-clear + label {
+            text-indent: -9999px;
+            width: 0.5em;
+            margin-left: -0.5em;
+        }
+        .star-cb-group > .star-cb-clear + label:before {
+            width: 0.5em;
+        }
+        .star-cb-group:hover > input + label:before {
+            content: '\2606';
+            color: #888;
+            text-shadow: none;
+        }
+        .star-cb-group:hover > input + label:hover ~ label:before, .star-cb-group:hover > input + label:hover:before {
+            content: '\2605';
+            color: #e52;
+            text-shadow: 0 0 1px #333;
+        }
+
+
+    </style>
+    <?php $__env->stopSection(); ?>
 
 <?php $__env->startSection('main-content'); ?>
     <main class="main-content">
@@ -28,7 +86,7 @@
                             <ul class="movie-meta">
                                 <li><strong>Rating:</strong>
                                     <div class="star-rating" title="Rated 3.00 out of 5">
-                                        <span style="width:<?php echo e(\App\Http\Controllers\MovieController::getRating($movie->mov_id)); ?>%"><strong class="rating">4.00</strong> out of 5</span></div>
+                                        <span style="width:<?php echo e(\App\Http\Controllers\MovieController::getRatings($movie->mov_id)); ?>%"><strong class="rating">4.00</strong> out of 5</span></div>(<?php echo e(\App\Http\Controllers\MovieController::getNumRatings($movie->mov_id)); ?>)
                                 </li>
                                 <li><strong>Length:</strong> <?php echo e($movie->mov_time); ?> min</li>
                                 <li><strong>Premiere:</strong> <?php echo e($movie->mov_rel); ?> (<?php echo e($movie->mov_rel_country); ?>)</li>
@@ -62,6 +120,18 @@
 
 
                             </div>
+                            <form id="f" action="<?php echo e(route('rating-start')); ?>" method="POST">
+                                <?php echo csrf_field(); ?>
+                                    <span class="star-cb-group">
+                                      <input type="radio" style="font-size: larger" id="rating-5" onclick="submit()"  name="rating" value="5"/><label for="rating-5">5</label>
+                                      <input type="radio" id="rating-4" onclick="submit()" name="rating" value="4" /><label for="rating-4">4</label>
+                                      <input type="radio" id="rating-3" onclick="submit()"name="rating" value="3"/><label for="rating-3">3</label>
+                                      <input type="radio" id="rating-2" onclick="submit()" name="rating" value="2"/><label for="rating-2">2</label>
+                                      <input type="radio" id="rating-1" onclick="submit()" name="rating" value="1"/><label for="rating-1">1</label>
+                                      <input type="radio" id="rating-0" onclick="submit()"name="rating" value="0" class="star-cb-clear"/><label for="rating-0">0</label>
+
+                                    </span><input type="number" value="<?php echo e($movie->mov_id); ?>" name="id_movie" hidden/>
+                            </form>
                         </div>
 
                     </div> <!-- .row -->
@@ -69,7 +139,13 @@
                 </div>
             </div>
         </div> <!-- .container -->
+
     </main>
+    <script type='text/javascript'>
+       function submit() {
+            document.getElementById("f").submit();
+       }
+    </script>
 <?php $__env->stopSection(); ?>
 
 <?php echo $__env->make('layouts_v2.master', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?><?php /**PATH C:\Users\PC ASUS\Desktop\CNPM-WEBSITE\movienow\movienow\resources\views/movie_v2/single.blade.php ENDPATH**/ ?>

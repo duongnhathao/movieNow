@@ -10,7 +10,7 @@
         <div class="card-header py-3">
             <h6 class="m-0 font-weight-bold text-danger">Detail of Movie : <?php echo e($movie->mov_title); ?></h6>
         </div>
-        
+
         <div class="card-body">
             <div class="row">
                 <div class="col-lg-5 d-none d-lg-block bg-movie-image"
@@ -51,15 +51,12 @@
                                         <td>Name:</td>
                                         <td><input name="nameChapter" type="text"></td>
                                     </tr>
-                                    <tr>
-                                        <td>Chapter numbers:</td>
-                                        <td><input name="chapterNumbers" type="text"></td>
-                                    </tr>
+
                                     <tr>
                                         <td></td>
                                         <td><input type="file" name="myFile"></td>
                                     </tr>
-                                
+
                                 </table>
 
                                     <div class="card-body">
@@ -80,4 +77,5 @@
     </div>
 <?php $__env->stopSection(); ?>
 <!-- Page level plugins -->
+
 <?php echo $__env->make('admin.admin_layouts.master', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?><?php /**PATH C:\Users\PC ASUS\Desktop\CNPM-WEBSITE\movienow\movienow\resources\views/admin/add_chapter.blade.php ENDPATH**/ ?>

@@ -4,6 +4,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0,maximum-scale=1">
 
     <title>@yield('title')</title>
+    <link rel="icon" href="{{asset('/image/circle-cropped.png')}}">
 
     <!-- Loading third party fonts -->
     <link href="http://fonts.googleapis.com/css?family=Roboto:300,400,700|" rel="stylesheet" type="text/css">

@@ -21,8 +21,8 @@
                 <div class="col-lg-7">
                     <div class="p-5">
                         <div class="card-body">
-                        
-                            <form action="{{ url('add-chapter') }}" method="POST" role="form">
+
+                            <form action="{{ url('admin/add-chapter') }}" method="POST" role="form">
                                 <input name="mov_id" type="hidden" value="{{$movie->mov_id}}">
                                     {{ csrf_field()}}
                                 <button type="submit" class="btn btn-success btn-icon-split">
@@ -32,7 +32,7 @@
                                     <span class="text">Add Chapter</span>
                                 </button>
                             </form>
-                            
+
                             <!--<a href="add_chapter" id="buttonAddChapter" class="btn btn-success btn-icon-split">
                                 <span class="icon text-white-50">
                                         <i class="fas fa-check"></i>
@@ -41,16 +41,16 @@
                             </a>-->
                         </div>
 
-                       
+
                         @foreach($chapters as $chapter)
                             <div class="card shadow mb-4">
                                 <!-- Card Header - Accordion -->
-                                <a href="#collapseCardExample" class="d-block card-header py-3" data-toggle="collapse"
-                                   role="button" aria-expanded="true" aria-controls="collapseCardExample">
+                                <a href="#collapseCardExample{{$chapter->chapter_nums}}" class="d-block card-header py-3" data-toggle="collapse"
+                                   role="button" aria-expanded="true" aria-controls="collapseCardExample{{$chapter->chapter_nums}}">
                                     <h6 class="m-0 font-weight-bold text-primary">{{$chapter->chapter_name}}</h6>
                                 </a>
                                 <!-- Card Content - Collapse -->
-                                <div class="collapse" id="collapseCardExample" style="">
+                                <div class="collapse" id="collapseCardExample{{$chapter->chapter_nums}}" style="">
                                     <div class="card-body">
                                         {{--<strong>Link : </strong>{{$chapter->chapter_link }}--}}
                                         {{--<form method="POST" action = "{{route('replaceFilm')}}" enctype="multipart/form-data" >--}}
@@ -61,7 +61,7 @@
                                             {{--<input type="file" name="myFile" id="myFile" >--}}
                                                 {{--<button type="submit">Upload</button>--}}
                                         {{--</form>--}}
-                                    
+
                                         {{--<strong>Time upload : </strong>{{$chapter->chapter_time_upload }}<br>--}}
                                         {{--<form method="POST" action = "{{route('replaceFilm')}}" enctype="multipart/form-data" >--}}
                                             {{--@csrf--}}
@@ -69,27 +69,23 @@
                                             {{--<button type="submit">Upload</button>--}}
                                         {{--</form>--}}
 
-                                        <a href="editMovieDetails"  id="myBtn" class="btn btn-danger btn-icon-split">
+                                        <a href="admin/update-chapter/{{$movie->mov_id}}/{{$chapter->chapter_nums}}"  id="myBtn" class="btn btn-warning btn-icon-split">
                                             <span class="icon text-white-50">
                                                 <i class="fas fa-exclamation-triangle"></i>
                                             </span>
                                             <span class="text">Edits</span>
                                         </a>
 
-                                        <a href="#" class="btn btn-success btn-icon-split">
-                                            <span class="icon text-white-50">
-                                                <i class="fas fa-check"></i>
-                                            </span>
-                                            <span class="text">Add Movie</span>
-                                        </a>
 
-                                        <a href="#" id="buttonDelete"" class="btn btn-danger btn-icon-split">
+                                        @if($chapter->chapter_nums==DB::table('movie_chapter')->where('mov_id','=',$movie->mov_id)->select('chapter_nums')->orderByDesc('chapter_nums')->first()->chapter_nums)
+
+                                        <a href= "/admin/delete_chapter/{{$movie->mov_id}}/{{$chapter->chapter_nums}}" id="buttonDelete"  class="btn btn-danger btn-icon-split">
                                             <span class="icon text-white-50">
-                                                <i class="fas fa-exclamation-triangle"></i>
+                                                <i class="fas fa-ban"></i>
                                             </span>
                                             <span class="text">Delete</span>
                                         </a>
-
+                                                    @endif
                                         <!-- The Modal -->
                                         <div id="myModal" class="modal">
 
@@ -152,20 +148,20 @@
                         @endforeach
 
 
-                        
+
                         {{--<form method="POST" action="{{route('replaceFilm')}}" enctype="multipart/form-data">--}}
-                        
+
                             {{--@csrf--}}
-                        
+
                             {{--<input name="MovieID" type="hidden" value=" {{$movie->mov_id}}">--}}
                             {{--<input name="directory" type="hidden"--}}
                                 {{--value=" {{(explode("/",$chapter->chapter_link )[0])."/".(explode("/",$chapter->chapter_link )[1])}}">--}}
                             {{--<input name="name" type="hidden" value=" {{(explode("/",$chapter->chapter_link )[2])}}">--}}
                             {{--<input type="file" name="myFile" id="myFile">--}}
-                            
+
                             {{--<button type="submit">Upload</button>--}}
                         {{--</form>--}}
-                        
+
 
                     </div>
                 </div>
@@ -179,10 +175,10 @@
     <script>
         // Get the modal
         /*var modal = document.getElementById("myModal");
-        
+
         // Get the button that opens the modal
         var btn = document.getElementById("myBtn");
-        
+
         // Get the <span> element that closes the modal
         var span = document.getElementsByClassName("close")[0];
 
@@ -190,13 +186,13 @@
         btn.onclick = function() {
             modal.style.display = "block";
         }
-        
+
 
         // When the user clicks on <span> (x), close the modal
         span.onclick = function() {
             modal.style.display = "none";
         }
-        
+
 
         // When the user clicks anywhere outside of the modal, close it
         window.onclick = function(event) {
@@ -204,7 +200,7 @@
                 modal.style.display = "none";
             }
         }*/
-        
+
     </script>
 
 @endsection

@@ -12,7 +12,7 @@
         <div class="card-header py-3">
             <h6 class="m-0 font-weight-bold text-danger">Detail of Movie : {{$movie->mov_title}}</h6>
         </div>
-        
+
         <div class="card-body">
             <div class="row">
                 <div class="col-lg-5 d-none d-lg-block bg-movie-image"
@@ -52,15 +52,12 @@
                                         <td>Name:</td>
                                         <td><input name="nameChapter" type="text"></td>
                                     </tr>
-                                    <tr>
-                                        <td>Chapter numbers:</td>
-                                        <td><input name="chapterNumbers" type="text"></td>
-                                    </tr>
+
                                     <tr>
                                         <td></td>
                                         <td><input type="file" name="myFile"></td>
                                     </tr>
-                                
+
                                 </table>
 
                                     <div class="card-body">

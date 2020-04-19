@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title></title>@include("admin.admin_layouts.header")
+    <title>MovieNow || Admin</title>@include("admin.admin_layouts.header")
     <link href="{{asset('vendor/datatables/dataTables.bootstrap4.min.css')}}" rel="stylesheet">
-
+    <link rel="icon" href="{{asset('/image/circle-cropped.png')}}">
     @yield('link')
 </head>
 <body id="page-top">

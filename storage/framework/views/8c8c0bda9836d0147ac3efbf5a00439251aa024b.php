@@ -18,6 +18,7 @@
                 </li>
                 
                 <li class="menu-item <?php echo $__env->yieldContent('current-contact'); ?>"><a href="/about">Contact</a></li>
+                <li class="menu-item "><a href="/admin/login">Login</a></li>
 
 
 

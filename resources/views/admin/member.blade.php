@@ -11,15 +11,15 @@
             <h6 class="m-0 font-weight-bold text-primary">Member Data</h6>
         </div>
 
-        <div class="card-body">
-            <a href="add_member" class="btn btn-success btn-icon-split">
-                <span class="icon text-white-50">
-                    <i class="fas fa-check"></i>
-                </span>
-                            
-                <span class="text">Add Member</span>
-            </a>
-        </div>
+{{--        <div class="card-body">--}}
+{{--            <a href="add_member" class="btn btn-success btn-icon-split">--}}
+{{--                <span class="icon text-white-50">--}}
+{{--                    <i class="fas fa-check"></i>--}}
+{{--                </span>--}}
+{{--                            --}}
+{{--                <span class="text">Add Member</span>--}}
+{{--            </a>--}}
+{{--        </div>--}}
 
         <div class="card-body">
             <div class="table-responsive">
@@ -57,7 +57,7 @@
                                     <span class="text">Edit</span>
                                 </button>
                             </form>
-                                
+
                             </td>
                         </tr>
                     @endforeach

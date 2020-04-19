@@ -1,4 +1,4 @@
-@section('title', 'Movie Review')
+@section('title', 'About us || MovieNow')
 {{--@section('current-home', '')--}}
 {{--@section('current-review', '')--}}
 {{--@section('current-joinus', '')--}}

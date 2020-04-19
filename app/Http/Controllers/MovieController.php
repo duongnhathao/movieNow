@@ -127,7 +127,7 @@ class MovieController extends Controller
         }
     }
 
-    public static function getRating($movie_id)
+    public static function getRatings($movie_id)
     {
         $sum_rate = 0;
         $rated = DB::table('movie_rating')->where('mov_id', $movie_id)->get();
@@ -139,22 +139,27 @@ class MovieController extends Controller
         else return 0;
     }
 
-    public static function getRatings($movie_id){
+    public static function getNumRatings($movie_id){
         $sum_rate = 0;
-        $rated = DB::table('movie_rating')->where('mov_id', $movie_id)->get();
-        foreach ($rated as $rate) {
-            $sum_rate += $rate->rev_starts;
+        try {
+            $sum_rate = DB::table('movie_rating')->where('mov_id', $movie_id)->get()->count();
         }
-        if (count($rated) != 0)
-            return $sum_rate / count($rated) ;
-        else return 0;
+        catch (\Exception $e){ $sum_rate = 0;}
+
+         return $sum_rate;
     }
     public static function getAllGenres()
     {
         $db = Movie::get_all_genres();
         return $db;
     }
+    public static function rating(Request $request){
 
+        DB::table('movie_rating')->insert([
+            ['mov_id'=>$request->id_movie,'rev_id'=>1,'rev_starts'=>$request->rating]]);
+        return redirect()
+            ->back();
+    }
     public function getByGenTitle($gen_title)
     {
         try {
@@ -192,13 +197,31 @@ class MovieController extends Controller
         return $ddb->count();
     }
     public static function get_top_x_movie_just_update($x_top){
+
         $ddb =  DB::table('movie_chapter')
             ->select('mov_id')
             ->distinct()
             ->orderByDesc('chapter_time_upload')
             ->take($x_top)
             ->get();
+//        dd($ddb);
+
         return $ddb;
+
+
+    }
+    public static function getTopXMovieRating($x_top){
+
+        $ddb =  DB::table('movie')
+            ->select('mov_id')
+            ->distinct()
+            ->take($x_top)
+            ->get();
+        $top_X_movie = collect();
+        foreach ($ddb as $id_movietop) {
+            $top_X_movie->push(Movie::get_movie_by_id($id_movietop->mov_id));
+        }
+        return $top_X_movie;
 
 
     }

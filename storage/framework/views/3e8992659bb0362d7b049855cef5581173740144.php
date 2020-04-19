@@ -19,8 +19,8 @@
                 <div class="col-lg-7">
                     <div class="p-5">
                         <div class="card-body">
-                        
-                            <form action="<?php echo e(url('add-chapter')); ?>" method="POST" role="form">
+
+                            <form action="<?php echo e(url('admin/add-chapter')); ?>" method="POST" role="form">
                                 <input name="mov_id" type="hidden" value="<?php echo e($movie->mov_id); ?>">
                                     <?php echo e(csrf_field()); ?>
 
@@ -31,7 +31,7 @@
                                     <span class="text">Add Chapter</span>
                                 </button>
                             </form>
-                            
+
                             <!--<a href="add_chapter" id="buttonAddChapter" class="btn btn-success btn-icon-split">
                                 <span class="icon text-white-50">
                                         <i class="fas fa-check"></i>
@@ -40,16 +40,16 @@
                             </a>-->
                         </div>
 
-                       
+
                         <?php $__currentLoopData = $chapters; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $chapter): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
                             <div class="card shadow mb-4">
                                 <!-- Card Header - Accordion -->
-                                <a href="#collapseCardExample" class="d-block card-header py-3" data-toggle="collapse"
-                                   role="button" aria-expanded="true" aria-controls="collapseCardExample">
+                                <a href="#collapseCardExample<?php echo e($chapter->chapter_nums); ?>" class="d-block card-header py-3" data-toggle="collapse"
+                                   role="button" aria-expanded="true" aria-controls="collapseCardExample<?php echo e($chapter->chapter_nums); ?>">
                                     <h6 class="m-0 font-weight-bold text-primary"><?php echo e($chapter->chapter_name); ?></h6>
                                 </a>
                                 <!-- Card Content - Collapse -->
-                                <div class="collapse" id="collapseCardExample" style="">
+                                <div class="collapse" id="collapseCardExample<?php echo e($chapter->chapter_nums); ?>" style="">
                                     <div class="card-body">
                                         
                                         
@@ -60,7 +60,7 @@
                                             
                                                 
                                         
-                                    
+
                                         
                                         
                                             
@@ -68,27 +68,23 @@
                                             
                                         
 
-                                        <a href="editMovieDetails"  id="myBtn" class="btn btn-danger btn-icon-split">
+                                        <a href="admin/update-chapter/<?php echo e($movie->mov_id); ?>/<?php echo e($chapter->chapter_nums); ?>"  id="myBtn" class="btn btn-warning btn-icon-split">
                                             <span class="icon text-white-50">
                                                 <i class="fas fa-exclamation-triangle"></i>
                                             </span>
                                             <span class="text">Edits</span>
                                         </a>
 
-                                        <a href="#" class="btn btn-success btn-icon-split">
-                                            <span class="icon text-white-50">
-                                                <i class="fas fa-check"></i>
-                                            </span>
-                                            <span class="text">Add Movie</span>
-                                        </a>
 
-                                        <a href="#" id="buttonDelete"" class="btn btn-danger btn-icon-split">
+                                        <?php if($chapter->chapter_nums==DB::table('movie_chapter')->where('mov_id','=',$movie->mov_id)->select('chapter_nums')->orderByDesc('chapter_nums')->first()->chapter_nums): ?>
+
+                                        <a href= "/admin/delete_chapter/<?php echo e($movie->mov_id); ?>/<?php echo e($chapter->chapter_nums); ?>" id="buttonDelete"  class="btn btn-danger btn-icon-split">
                                             <span class="icon text-white-50">
-                                                <i class="fas fa-exclamation-triangle"></i>
+                                                <i class="fas fa-ban"></i>
                                             </span>
                                             <span class="text">Delete</span>
                                         </a>
-
+                                                    <?php endif; ?>
                                         <!-- The Modal -->
                                         <div id="myModal" class="modal">
 
@@ -151,20 +147,20 @@
                         <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
 
 
+
                         
-                        
-                        
+
                             
-                        
+
                             
                             
                                 
                             
                             
-                            
+
                             
                         
-                        
+
 
                     </div>
                 </div>
@@ -178,10 +174,10 @@
     <script>
         // Get the modal
         /*var modal = document.getElementById("myModal");
-        
+
         // Get the button that opens the modal
         var btn = document.getElementById("myBtn");
-        
+
         // Get the <span> element that closes the modal
         var span = document.getElementsByClassName("close")[0];
 
@@ -189,13 +185,13 @@
         btn.onclick = function() {
             modal.style.display = "block";
         }
-        
+
 
         // When the user clicks on <span> (x), close the modal
         span.onclick = function() {
             modal.style.display = "none";
         }
-        
+
 
         // When the user clicks anywhere outside of the modal, close it
         window.onclick = function(event) {
@@ -203,9 +199,10 @@
                 modal.style.display = "none";
             }
         }*/
-        
+
     </script>
 
 <?php $__env->stopSection(); ?>
 <!-- Page level plugins -->
+
 <?php echo $__env->make('admin.admin_layouts.master', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?><?php /**PATH C:\Users\PC ASUS\Desktop\CNPM-WEBSITE\movienow\movienow\resources\views/admin/edit_movie.blade.php ENDPATH**/ ?>
